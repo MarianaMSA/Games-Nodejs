@@ -38,7 +38,7 @@ app.get('/games/:id', (req,res) =>{
     }
     res.send(game); // Msg nome game
 })
-
+app.listen(port, )
 //Random
 app.get('/game-aleatorio', (req, res)=>{
     let gameRandom = games[Math.floor(Math.random()*games.length)];
@@ -84,3 +84,6 @@ app.delete('/games/:id', (req,res)=>{
     res.send(`O jogo ${gameApagado} foi excluído com sucesso.`);
 });
 
+app.listen(port, () =>{ 
+    console.log(`App rodando na porta http://localhost:${port}/`)
+});
